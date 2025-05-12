@@ -5,7 +5,7 @@ let noticias = [
     data: "Publicado em 10/04/2025",
     autor: "<strong>Autor: Lucas Araujo</strong>",
     conteudo: "A equipe de Betim disputará a Supercopa IMEF 2025, pela categoria sub-14! A competição de categorias de base realizada pelo Instituto Mineiro das Escolas de Futebol irá acontecer entre abril e julho, e o Time da Cidade está pronto para a sua estreia no próximo sábado (12), em Lavras!",
-    imagem: "img/background.avif",
+    imagem: "img/betim.jpg",
   },
 
   {
@@ -14,7 +14,7 @@ let noticias = [
     data: "Publicado em 10/04/2025",
     autor: "<strong>Autor: Lucas Araujo</strong>",
     conteudo: "O Fabrication Laboratory (Laboratório de Fabricação, na tradução literal) do Instituto Ramacrisna está completando 3 anos com a conquista de um marco.",
-    imagem: "img/background.avif",
+    imagem: "img/ramacrisna.webp",
   },
 
   {
@@ -23,7 +23,7 @@ let noticias = [
     data: "Publicado em 10/04/2025",
     autor: "<strong>Autor: Lucas Araujo</strong>",
     conteudo: "Moradores de Betim e região podem contar com uma importante ajuda neste período de entrega do Imposto de Renda. A PUC Minas Betim, por meio do Núcleo de Apoio Contábil Fiscal (NAF).",
-    imagem: "img/background.avif",
+    imagem: "img/puc.jpg",
 
   },
 
@@ -33,7 +33,7 @@ let noticias = [
     data: "Publicado em 13/04/2025",
     autor: "<strong>Autor: Lucas Araujo</strong>",
     conteudo: "A nova camisa do Cabuloso foi um verdadeiro sucesso!",
-    imagem: "img/background.avif",
+    imagem: "img/cruzeiro.jpg",
   },
 
 ];
