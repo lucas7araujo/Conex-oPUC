@@ -1,61 +1,39 @@
-let noticias = [
-  {
-    id: 1,
-    titulo: "Betim na Supercopa IMEF 2025",
-    data: "Publicado em 10/04/2025",
-    autor: "<strong>Autor: Lucas Araujo</strong>",
-    conteudo: "A equipe de Betim disputará a Supercopa IMEF 2025, pela categoria sub-14! A competição de categorias de base realizada pelo Instituto Mineiro das Escolas de Futebol irá acontecer entre abril e julho, e o Time da Cidade está pronto para a sua estreia no próximo sábado (12), em Lavras!",
-    imagem: "img/betim.jpg",
-  },
+const API_KEY = "496925439c5d4e388f8d02a4d9ab9c84"; 
+const API_URL = `https://newsapi.org/v2/everything?q=Brasil&language=pt&apiKey=${API_KEY}`;
 
-  {
-    id: 2,
-    titulo: "Laboratório do Ramacrisna recebe certificação internacional!",
-    data: "Publicado em 10/04/2025",
-    autor: "<strong>Autor: Lucas Araujo</strong>",
-    conteudo: "O Fabrication Laboratory (Laboratório de Fabricação, na tradução literal) do Instituto Ramacrisna está completando 3 anos com a conquista de um marco.",
-    imagem: "img/ramacrisna.webp",
-  },
+fetch(API_URL)
+    .then(response => response.json()) 
+    .then(data => {
+        console.log(data); 
 
-  {
-    id: 3,
-    titulo: "PUC Minas oferece atendimento gratuito pra declaração do IR",
-    data: "Publicado em 10/04/2025",
-    autor: "<strong>Autor: Lucas Araujo</strong>",
-    conteudo: "Moradores de Betim e região podem contar com uma importante ajuda neste período de entrega do Imposto de Renda. A PUC Minas Betim, por meio do Núcleo de Apoio Contábil Fiscal (NAF).",
-    imagem: "img/puc.jpg",
+        if (!data.articles || data.articles.length === 0) {
+            document.getElementById('card-post').innerHTML = "<p>🚨 Nenhuma notícia encontrada.</p>";
+            return;
+        }
 
-  },
+        let txtHTML = '';
 
-  {
-    id: 4,
-    titulo: "Cruzeiro lança nova linha de uniformes",
-    data: "Publicado em 13/04/2025",
-    autor: "<strong>Autor: Lucas Araujo</strong>",
-    conteudo: "A nova camisa do Cabuloso foi um verdadeiro sucesso!",
-    imagem: "img/cruzeiro.jpg",
-  },
+        data.articles.forEach(news => { 
+            const image = news.urlToImage ? news.urlToImage : "img/default-news.jpg"; 
 
-];
+            txtHTML += `
+                <div class="news">
+                    <div class="news-img"><img src="${image}" alt="Imagem da notícia"></div>
+                    <div class="news-texto">
+                        <a href="detalhes.html?id=${news.url}"><h2 class="news-h2">${news.title}</h2></a>
+                        <p>Publicado em ${new Date(news.publishedAt).toLocaleDateString("pt-BR")}<br><strong>Fonte:</strong> ${news.source.name}</p>
+                    </div>
+                </div>
+            `;
+        });
 
-let txtHTML = '';
+        document.getElementById('card-post').innerHTML = txtHTML;
+    })
+    .catch(error => {
+        console.error("Erro ao buscar notícias:", error);
+        document.getElementById('card-post').innerHTML = "<p>🚨 Erro ao carregar as notícias.</p>";
+    });
 
-for (let i = 0; i < noticias.length; i++) {
-  let news = noticias[i];
-
-  txtHTML += `
-    <div class="news">
-    <div class="news-img"><img src="${news.imagem}" alt=""></div>
-    <div class="news-texto">
-    <a href="detalhes.html?id=${news.id}"><h2 class="news-h2">${news.titulo}</h2></a>
-        <p>${news.data}<br>${news.autor}</p>
-    </div>
-    </div>
-`;
-}
-console.log(txtHTML);
-
-document.getElementById('card-post').innerHTML = txtHTML;
 
 let noticias2 = [
   {
@@ -73,9 +51,7 @@ let noticias2 = [
     titulo: "Inscrições PROUNI 2º Semestre",
     imagem: "img/prouni.png",
   },
-  
-
-]
+];
 
 let txtHTML2 = '';
 
@@ -92,7 +68,4 @@ for (let i = 0; i < noticias2.length; i++) {
 `;
 }
 
-console.log(txtHTML2);
-
 document.getElementById('barralateral').innerHTML = txtHTML2;
-
