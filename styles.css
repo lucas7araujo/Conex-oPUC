@@ -153,7 +153,10 @@ header a {
 /*News*/
 
 .news {
-  background-color: aqua;
+  background-image: url("img/background.jpg");
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.8rem;
   margin: 1rem;
   display: flex;
   padding: 0.9rem;
@@ -190,7 +193,11 @@ header a {
 /*Assuntos*/
 
 .assuntos {
-  background-color: yellow;
+  border: 2px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.8rem;
+  background-image: url("img/background.jpg");
+  object-fit: cover;
   width: 100%;
   height: auto;
   flex-shrink: 0;
@@ -199,6 +206,12 @@ header a {
   text-align: center;
   margin: 1rem;
   margin-left: -1rem;
+}
+
+.assuntos:hover, .news:hover {
+  transform: scale(1.03);
+  cursor: pointer; 
+  transition: transform 0.3s ease;
 }
 
 
@@ -277,35 +290,39 @@ header a {
 }
 
 @media (max-width: 1200px) {
-    .main {
-        flex-direction: column; 
-        align-items: center; 
-    }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .news {
+  .news {
     width: 85%;
     margin: 1rem auto;
     display: flex;
-    align-items: center;  
+    align-items: center;
+  }
+
+
+  #barralateral {
+    display: none;
+  }
 }
 
+@media (max-width: 970px) {
 
-    #barralateral {
-        display: none;
-    }
-}
-
-@media (max-width: 970px){
-  .news p, h2{
+  .news p,
+  h2 {
     font-size: 1rem;
   }
-} 
+}
 
-@media (max-width: 740px){
-  .news p, h2{
+@media (max-width: 740px) {
+
+  .news p,
+  h2 {
     font-size: 0.7rem;
   }
-} 
+}
 
 @media (max-width: 795px) {
   header a {
@@ -344,7 +361,8 @@ header a {
     font-size: 0.8rem;
   }
 
-  .news p, h2{
+  .news p,
+  h2 {
     font-size: 0.6rem;
   }
 
