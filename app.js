@@ -62,17 +62,17 @@ let noticias2 = [
   {
     id: "a1",
     titulo: "BTS retorna ao Brasil em 2026",
-    imagem: "img/background.avif",
+    imagem: "img/bts.webp",
   },
   {
     id: "a2",
     titulo: "Cristiano marca 3 vezes",
-    imagem: "img/background.avif",
+    imagem: "img/cr7.webp",
   },
   {
     id: "a3",
     titulo: "Inscrições PROUNI 2º Semestre",
-    imagem: "img/background.avif",
+    imagem: "img/prouni.jpg",
   },
   
 
