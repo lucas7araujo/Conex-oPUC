@@ -153,10 +153,8 @@ header a {
 /*News*/
 
 .news {
-  background-image: url("img/background.jpg");
-  border: 2px solid #ccc;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 1.8rem;
+  border-bottom: 2px solid #ccc; /* Apenas linha na parte inferior */
+  border-radius: 0; /* Remove bordas arredondadas */
   margin: 1rem;
   display: flex;
   padding: 0.9rem;
@@ -184,20 +182,20 @@ header a {
 }
 
 .news-texto {
-  width: 50%;
+  width: 50% !important;
 }
 
 .news-texto p {
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
 }
+
 
 /*Assuntos*/
 
 .assuntos {
-  border: 2px solid #ccc;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 1.8rem;
-  background-image: url("img/background.jpg");
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
   object-fit: cover;
   width: 100%;
   height: auto;
@@ -209,8 +207,7 @@ header a {
   margin-left: -1rem;
 }
 
-.assuntos:hover,
-.news:hover {
+.assuntos:hover{
   transform: scale(1.03);
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -291,17 +288,7 @@ header a {
   color: #fff;
 }
 
-/* <div class="main-detalhes">
-                <div id="noticia-id">
-                    <div class="card">
-                        <h2 class="titulo-detalhes">Cruzeiro Lança Nova Linha de Uniformes</h2>
-                        <img src="img/cruzeiro.jpg" alt="" class="img-detalhes">
-                        <p class="autor">Lucas Araújo</p>
-                        <p class="data-publi">12/05/2025</p>
-                        <p class="conteudo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum minima, voluptas voluptatem temporibus quisquam nobis. Possimus dignissimos voluptatibus, non, mollitia temporibus laborum minus doloremque obcaecati vero eaque libero minima autem dolore similique saepe ipsum recusandae dolorum dolor, quo omnis vel. Nemo unde vitae enim quod obcaecati id officiis sapiente tempore accusamus, temporibus molestiae incidunt odit, facilis illum aperiam adipisci quidem! Dolores, sunt id! Impedit officia et recusandae nisi tempora? Non impedit minima voluptas tempora! Adipisci assumenda perspiciatis molestias molestiae odit illo, inventore ipsa nihil consequatur magnam saepe veritatis consequuntur, necessitatibus, fugit velit voluptates aliquam tempora atque sed beatae ut? Esse quis cupiditate aliquid est sapiente quaerat modi omnis dolorem explicabo animi nam aliquam perferendis eos in dolorum iure corrupti nostrum maxime ea, consectetur veniam nobis voluptatum qui. Doloremque, itaque dolorum?</p>
-                    </div>
-                </div>
-            </div>*/
+/* Página de Detalhes*/
 
 .main-detalhes {
   display: flex;
@@ -352,14 +339,26 @@ p {
     text-align: center;
   }
 
+  .news h2{
+    font-size: 1.2rem;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .news p{
+    font-size: 1rem !important;
+  }
+
   .news-img {
     width: 100%;
   }
 
-  .news-texto {
-    width: 100%;
-    padding-top: 1rem;
-  }
+  .news-texto p {
+    white-space: nowrap; 
+    overflow: hidden; 
+    padding: 0;
+}
+
 
   #barralateral {
     display: none;

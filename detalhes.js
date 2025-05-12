@@ -52,5 +52,5 @@ if (noticia) {
         </div>
     `;
 } else {
-    document.getElementById("noticia-id").innerHTML = "<p>Notícia não encontrada.</p>";
+    document.getElementById("noticia-id").innerHTML = "<p><strong>Notícia não encontrada.</strong></p>";
 }

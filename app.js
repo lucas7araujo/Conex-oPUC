@@ -48,8 +48,7 @@ for (let i = 0; i < noticias.length; i++) {
     <div class="news-img"><img src="${news.imagem}" alt=""></div>
     <div class="news-texto">
     <a href="detalhes.html?id=${news.id}"><h2 class="news-h2">${news.titulo}</h2></a>
-        <p>${news.data}</p>
-        <p>${news.autor}</p>
+        <p>${news.data}<br>${news.autor}</p>
     </div>
     </div>
 `;
