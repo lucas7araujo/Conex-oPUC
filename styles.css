@@ -173,6 +173,7 @@ header a {
   width: 40%;
   height: auto;
   padding: 1rem;
+  object-fit: cover;
 }
 
 .news-img img {
