@@ -72,7 +72,7 @@ let noticias2 = [
   {
     id: "a3",
     titulo: "Inscrições PROUNI 2º Semestre",
-    imagem: "img/prouni.jpg",
+    imagem: "img/prouni.png",
   },
   
 
