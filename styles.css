@@ -206,6 +206,7 @@ header a {
   width: 200px;
   height: 200px;
   margin: 2rem 2rem 0 2rem;
+  object-fit: cover;
 
 }
 
